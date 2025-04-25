@@ -3,20 +3,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .bg-blend-custom {
-      background-blend-mode: normal, normal, screen, overlay, normal;
-    }
-
-    .bg-blend-custom2 {
-      background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge, normal;
-    }
-
-    .bg-button {
-      background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-    }
-
-    .bg-button-hover {
-      background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-    }
-  }
