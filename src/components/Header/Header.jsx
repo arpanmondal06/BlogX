@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { FiHome, FiLogIn, FiUserPlus, FiFileText, FiPlusCircle } from 'react-icons/fi'
 import 'boxicons/css/boxicons.min.css';
 
+
 function Header({ collapsed, setCollapsed }) {
   const authStatus = useSelector((state) => state.auth.status)
   const navigate = useNavigate()
@@ -41,24 +42,24 @@ function Header({ collapsed, setCollapsed }) {
     <div
       className={`${
         collapsed ? 'w-30' : 'w-60'
-      } fixed top-0 left-0 h-full px-10px py-14px bg-transparent flex flex-col`}
+      } fixed top-0 left-0 h-full px-10px py-14px bg-slate-600 flex flex-col`}
     >
       {/* Logo + Toggle Button */}
       <div className="flex items-center">
         <span className="mw-60px flex items-center">
           <Link to="/">
             <img src="../public/logo.png" alt="logo" className={`${
-              collapsed ? ("size-20") : ("size-36")
-            } transition-all duration-300`} />
+              collapsed ? ("size-16 mr-1") : ("size-12 ml-5")
+            } mt-3 transition-all duration-300 rounded-[50%]`} />
           </Link>
         </span>
         {collapsed ? '' : (
-          <span className="text-16px font-medium flex">BlogX</span>
+          <span className="font-(family-name:Barriecito, system-ui) text-2xl italic flex ml-8 mt-3">BlogX</span>
         )}
         {collapsed ? (
-        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-right absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px' ></i>
+        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-right absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px mt-3' ></i>
         ) : (
-        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-left absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px' ></i>
+        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-left absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px mt-3' ></i>
         )}
 
       </div>
