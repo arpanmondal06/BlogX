@@ -48,7 +48,7 @@ function Header({ collapsed, setCollapsed }) {
       <div className="flex items-center">
         <span className="mw-60px flex items-center">
           <Link to="/">
-            <img src="../public/logo1.png" alt="logo" className={`${
+            <img src="../public/logo1_1.png" alt="logo" className={`${
               collapsed ? ("size-16 ml-1") : ("size-16 ml-5")
             } mt-3 transition-all duration-300 rounded-[50%]`} />
           </Link>
