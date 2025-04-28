@@ -20,6 +20,7 @@ export default {
       },
       fontFamily: {
         vinyl: ['Rubik Vinyl', 'serif'],
+        barriecito: ['Barriecito', 'serif'],
       },
     },
   },

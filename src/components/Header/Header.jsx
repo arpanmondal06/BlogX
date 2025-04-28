@@ -48,16 +48,18 @@ function Header({ collapsed, setCollapsed }) {
       <div className="flex items-center">
         <span className="mw-60px flex items-center">
           <Link to="/">
-            <img src="../public/logo.png" alt="logo" className={`${
-              collapsed ? ("size-16 mr-1") : ("size-12 ml-5")
+            <img src="../public/logo1.png" alt="logo" className={`${
+              collapsed ? ("size-16 ml-1") : ("size-16 ml-5")
             } mt-3 transition-all duration-300 rounded-[50%]`} />
           </Link>
         </span>
         {collapsed ? '' : (
-          <span className="font-(family-name:Barriecito, system-ui) text-2xl italic flex ml-8 mt-3">BlogX</span>
+          <Link to="/">
+            <span className="font-barriecito font-black text-gray-300 text-5xl italic flex ml-3 mt-3">BlogX</span>
+          </Link>
         )}
         {collapsed ? (
-        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-right absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px mt-3' ></i>
+        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-right absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl size-20px mt-3' ></i>
         ) : (
         <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-left absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px mt-3' ></i>
         )}
@@ -74,7 +76,7 @@ function Header({ collapsed, setCollapsed }) {
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="flex items-center w-full px-4 py-2 text-left rounded-lg hover:bg-blue-400 transition-colors"
+                    className="flex items-center w-full px-4 py-2 text-left rounded-lg text-gray-200 hover:bg-blue-400 transition-colors hover:text-gray-800"
                   >
                     <span className="text-lg">{item.icon}</span>
                     {!collapsed && <span className="ml-3 text-base">{item.name}</span>}
@@ -87,7 +89,7 @@ function Header({ collapsed, setCollapsed }) {
 
       {/* Bottom: Logout */}
       {authStatus && (
-        <div className="p-4 mt-auto">
+        <div className="p-4 mt-auto text-gray-200 hover:text-gray-800">
           <LogoutBtn collapsed={collapsed} />
         </div>
       )}
