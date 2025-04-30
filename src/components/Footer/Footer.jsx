@@ -14,8 +14,8 @@ function Footer({ collapsed }) {
           {/* Logo Section */}
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
             <div className="flex h-full flex-col justify-between">
-              <div className="mb-4 inline-flex items-center">
-                <Logo width="100px" />
+              <div className="mb-4  inline-flex items-center justify-center">
+                <Logo className="size-24 rounded-[50%]" />
               </div>
               <p className="text-sm text-gray-600">
                 &copy; {new Date().getFullYear()}. All Rights Reserved by DevUI.

@@ -48,20 +48,20 @@ function Header({ collapsed, setCollapsed }) {
       <div className="flex items-center">
         <span className="mw-60px flex items-center">
           <Link to="/">
-            <img src="../public/logo1_1.png" alt="logo" className={`${
+            <Logo src="/logo1_1.png" alt="logo" className={`${
               collapsed ? ("size-16 ml-1") : ("size-16 ml-5")
             } mt-3 transition-all duration-300 rounded-[50%]`} />
           </Link>
         </span>
         {collapsed ? '' : (
           <Link to="/">
-            <span className="font-barriecito font-black text-gray-300 text-5xl italic flex ml-3 mt-3">BlogX</span>
+            <span className="font-barriecito font-black text-gray-300 text-5xl italic flex ml-3 mt-4">BlogX</span>
           </Link>
         )}
         {collapsed ? (
-        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-right absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl size-20px mt-3' ></i>
+        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-right absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl size-20px mt-4' ></i>
         ) : (
-        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-left absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px mt-3' ></i>
+        <i onClick={() => setCollapsed(!collapsed)} class='bx bx-chevron-left absolute right-[-8px] w-30px h-30px translate-y-[-2/4] bg-blue-500 flex items-center justify-center rounded-xl text-white size-20px mt-4' ></i>
         )}
 
       </div>
